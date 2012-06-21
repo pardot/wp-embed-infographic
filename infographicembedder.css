@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/* The Title(s) */
+
+#infographic_embed h3 {
+	margin-bottom: 5px;
+}
+
+/* The Width Input */
+
+#embedupdate {
+	border-color: #ccc;
+	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	border-radius: 3px; 
+	font-weight: bold; 
+	height: 30px; 
+	padding: 0 7px; 
+	cursor: pointer; 
+}
+
+/* The Embed Code Textarea */
+
+#embedcode {
+	width: 90%; 
+	height: 100px; 
+	padding: 5px 10px;
+}
