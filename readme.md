@@ -1,11 +1,4 @@
 # Infographic Embedder
-Contributors: cliffseal 
-Tags: infographics,embed,embedder,image
-Requires at least: 3.8
-Tested up to: 3.8.1
-Stable tag: 1.1
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Give your readers an easier way to embed your infographics (or other images) on their sites, with proper attribution back to you.
 
