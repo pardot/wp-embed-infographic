@@ -1,0 +1,30 @@
+{
+  "name": "infographic-embedder",
+  "version": "1.1.0",
+  "description": "Give your readers an easier way to embed your infographics (or other images) on their sites, with proper attribution back to you.",
+  "main": "infographic-embedder.js",
+  "dependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-uglify": "~0.3.2"
+  },
+  "devDependencies": {
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt": "~0.4.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/logoscreative/infographic-embedder"
+  },
+  "keywords": [
+    "embed",
+    "infographic"
+  ],
+  "author": "Cliff Seal",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/logoscreative/infographic-embedder/issues"
+  }
+}
