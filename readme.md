@@ -51,7 +51,7 @@ function infographics_custom_image_code() {
 add_filter ( 'infographic_embedder_download_html', 'infographics_custom_image_code' );
 ```
 
-### Filter: Add Post Types
+### Filter: Custom Header and Labeling
 
 ```
 function infographics_custom_labeling() {
@@ -68,6 +68,9 @@ add_filter ( 'infographic_embedder_embed_html', 'infographics_custom_labeling' )
 
 ## Changelog
 
+### 1.1.1
+Fixes a bug with sites changing `wpautop`
+
 ### 1.1
 1. Add filters
 1. Remove default styling
@@ -79,6 +82,9 @@ add_filter ( 'infographic_embedder_embed_html', 'infographics_custom_labeling' )
 Initial release.
 
 ## Upgrade Notice
+
+### 1.1.1
+This updates fixes a bug for sites changing wpautop() around. 1.1 is a complete refactoring: default styling is removed, changing the image size is improved, and filters were added. Bugs for themes without jQuery were also fixed.
 
 ### 1.1
 This update is a complete refactoring: default styling is removed, changing the image size is improved, and filters were added. Bugs for themes without jQuery were also fixed.

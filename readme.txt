@@ -3,7 +3,7 @@ Contributors: cliffseal
 Tags: infographics,embed,embedder,image
 Requires at least: 3.8
 Tested up to: 3.8.1
-Stable tag: 1.1
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,8 +26,7 @@ Want to improve the plugin or add a feature? [Fork it on GitHub](https://github.
 
 = Filter: Add Post Types =
 
-```
-function infographics_on_my_post_types() {
+`function infographics_on_my_post_types() {
 	return array (
 		'post',
 		'page',
@@ -35,38 +34,31 @@ function infographics_on_my_post_types() {
 	);
 }
 
-add_filter ( 'infographic_embedder_post_types', 'infographics_on_my_post_types' );
-```
+add_filter ( 'infographic_embedder_post_types', 'infographics_on_my_post_types' );`
 
 = Filter: Edit Embed Code =
 
-```
-function infographics_custom_embed_code() {
+`function infographics_custom_embed_code() {
 	return '<img src="' . get_post_meta( get_the_ID(), 'infographic_embedder_post_class', true ) . '" alt="' . get_the_title() . ' - An Infographic from the Awesome ' . get_bloginfo('name') . '" width="100%" class="infographic_embedder" /><p class="infographic_attr">How awesome is <a href="' . get_permalink() . '" target="_blank">' . get_bloginfo('name') . '?!</a></p>';
 }
 
-add_filter ( 'infographic_embedder_image_code', 'infographics_custom_embed_code' );
-```
+add_filter ( 'infographic_embedder_image_code', 'infographics_custom_embed_code' );`
 
 = Filter: Download Text =
 
-```
-function infographics_custom_image_code() {
+`function infographics_custom_image_code() {
 	return '<p><a href="' . get_post_meta( get_the_ID(), 'infographic_embedder_post_class', true ) . '" target="_blank">Download</a> our infographic today!</p>';
 }
 
-add_filter ( 'infographic_embedder_download_html', 'infographics_custom_image_code' );
-```
+add_filter ( 'infographic_embedder_download_html', 'infographics_custom_image_code' );`
 
-= Filter: Add Post Types =
+= Filter: Custom Header and Labeling =
 
-```
-function infographics_custom_labeling() {
+`function infographics_custom_labeling() {
 	return '<h3>Embed</h3><label for="embed_width">Image Width</label>';
 }
 
-add_filter ( 'infographic_embedder_embed_html', 'infographics_custom_labeling' );
-```
+add_filter ( 'infographic_embedder_embed_html', 'infographics_custom_labeling' );`
 
 == Screenshots ==
 
@@ -74,6 +66,9 @@ add_filter ( 'infographic_embedder_embed_html', 'infographics_custom_labeling' )
 2. Meta box on post pages
 
 == Changelog ==
+
+= 1.1.1 =
+Fixes a bug with sites changing `wpautop`
 
 = 1.1 =
 1. Add filters
@@ -86,6 +81,9 @@ add_filter ( 'infographic_embedder_embed_html', 'infographics_custom_labeling' )
 Initial release.
 
 == Upgrade Notice ==
+
+= 1.1.1 =
+This updates fixes a bug for sites changing wpautop() around. 1.1 is a complete refactoring: default styling is removed, changing the image size is improved, and filters were added. Bugs for themes without jQuery were also fixed.
 
 = 1.1 =
 This update is a complete refactoring: default styling is removed, changing the image size is improved, and filters were added. Bugs for themes without jQuery were also fixed.
